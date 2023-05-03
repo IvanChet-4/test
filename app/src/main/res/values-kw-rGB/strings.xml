@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Playlist Maker</string>
+    <string name="app_find" translatable="false">Search</string>
+    <string name="app_media" translatable="false">Media library</string>
+    <string name="app_settings" translatable="false">Settings</string>
+    <string name="app_settings_name_activity" translatable="false">Settings</string>
+    <string name="app_settings_theme" translatable="false">Dark theme</string>
+    <string name="app_settings_share" translatable="false">Share</string>
+    <string name="app_settings_help" translatable="false">Write to support</string>
+    <string name="app_settings_doc" translatable="false">Terms of use</string>
+</resources>
