@@ -12,12 +12,14 @@
     <dimen name="padding20dp">20dp</dimen>
     <dimen name="padding21dp">21dp</dimen>
     <dimen name="padding23dp">23dp</dimen>
+    <dimen name="padding28dp">28dp</dimen>
     <dimen name="padding35dp">35dp</dimen>
     <!--margins-->
     <dimen name="margin4dp">4dp</dimen>
     <dimen name="margin6dp">6dp</dimen>
     <dimen name="margin16dp">16dp</dimen>
     <dimen name="margin10dp">10dp</dimen>
+    <dimen name="margin14dp">14dp</dimen>
     <dimen name="margin24dp">24dp</dimen>
     <dimen name="margin28dp">28dp</dimen>
     <dimen name="margin40dp">40dp</dimen>

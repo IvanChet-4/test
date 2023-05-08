@@ -12,6 +12,7 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 
 class FinderActivity : AppCompatActivity() {
        private val KEY_TEXT = ""
@@ -44,11 +45,10 @@ class FinderActivity : AppCompatActivity() {
                 }
             }
             inputEditText.addTextChangedListener(simpleTextWatcher)
-            val arrowButton = findViewById<Button>(R.id.button_finder_Home)
+            val arrowButton = findViewById<TextView>(R.id.title_find_to_home)
             arrowButton.setOnClickListener {
                 val displayIntent = Intent(this, MainActivity::class.java)
                 startActivity(displayIntent)
-                finish()
             }
         }
 
