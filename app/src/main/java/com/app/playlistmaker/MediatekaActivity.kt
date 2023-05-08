@@ -17,7 +17,6 @@ class MediatekaActivity : AppCompatActivity() {
         mediatekaHome.setOnClickListener {
             val displayIntent = Intent(this, MainActivity::class.java)
             startActivity(displayIntent)
-            finish()
         }
     }
 }
