@@ -23,7 +23,6 @@ class SettingsActivity : AppCompatActivity() {
         settingsHome.setOnClickListener {
             val displayIntent = Intent(this, MainActivity::class.java)
             startActivity(displayIntent)
-            finish()
         }
 
         shareToOtherApp.setOnClickListener {
@@ -34,24 +33,22 @@ class SettingsActivity : AppCompatActivity() {
             }
             val shareIntent = Intent.createChooser(sendIntent, null)
             startActivity(shareIntent)
-            finish()
         }
 
         writeToSupport.setOnClickListener {
-            val shareIntent = Intent(Intent.ACTION_SENDTO)
-            shareIntent.data = Uri.parse("mailto:")
-            shareIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf(getString(R.string.myMail)))
-            shareIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.subj_mes))
-            shareIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.message))
-            startActivity(shareIntent)
-            finish()
+            Intent(Intent.ACTION_SENDTO).apply {
+            data = Uri.parse("mailto:")
+            putExtra(Intent.EXTRA_EMAIL, arrayOf(getString(R.string.myMail)))
+            putExtra(Intent.EXTRA_SUBJECT, getString(R.string.subj_mes))
+            putExtra(Intent.EXTRA_TEXT, getString(R.string.message))
+            startActivity(this)
+            }
         }
 
         settingsConfirm.setOnClickListener {
             val openSite = Intent(Intent.ACTION_VIEW);
             openSite.setData(Uri.parse(getString(R.string.urlConfirm)));
             startActivity(openSite);
-            finish()
         }
     }
 }

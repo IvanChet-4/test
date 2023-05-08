@@ -18,19 +18,16 @@ class MainActivity : AppCompatActivity() {
         mainFind.setOnClickListener {
             val displayIntent = Intent(this, FinderActivity::class.java)
             startActivity(displayIntent)
-            finish()
         }
 
         mainSettings.setOnClickListener {
             val displayIntent = Intent(this, SettingsActivity::class.java)
             startActivity(displayIntent)
-            finish()
         }
 
         mainMedia.setOnClickListener {
             val displayIntent = Intent(this, MediatekaActivity::class.java)
             startActivity(displayIntent)
-            finish()
         }
     }
 }
