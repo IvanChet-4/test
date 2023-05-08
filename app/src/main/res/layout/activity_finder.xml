@@ -36,6 +36,7 @@
             android:drawableStart="@drawable/finder"
             android:drawablePadding="@dimen/padding9dp"
             android:hint="@string/app_find"
+            android:textColorHint="@color/settings_finder2"
             android:inputType="text"
             android:maxLength="15"
             android:maxLines="1"
@@ -43,7 +44,7 @@
             android:paddingTop="@dimen/padding8_5dp"
             android:paddingEnd="@dimen/padding0dp"
             android:paddingBottom="@dimen/padding8_5dp"
-            android:textColor="@color/settings_finder2"
+            android:textColor="@color/settings_text_title"
             android:textSize="@dimen/text16sp" />
         <ImageView
             android:id="@+id/clearIcon"
@@ -63,5 +64,4 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </ListView>
-
 </LinearLayout>
