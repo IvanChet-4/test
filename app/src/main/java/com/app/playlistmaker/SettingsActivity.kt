@@ -23,6 +23,7 @@ class SettingsActivity : AppCompatActivity() {
         settingsHome.setOnClickListener {
             val displayIntent = Intent(this, MainActivity::class.java)
             startActivity(displayIntent)
+            finish()
         }
 
         shareToOtherApp.setOnClickListener {
