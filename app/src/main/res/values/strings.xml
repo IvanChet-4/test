@@ -1,3 +1,26 @@
 <resources>
-    <string name="app_name">test</string>
+    <!--Для главного экрана-->
+    <string name="app_name">Playlist Maker</string>
+    <string name="app_find" translatable="false">Поиск</string>
+    <string name="app_media" translatable="false">Медиатека</string>
+    <string name="app_settings" translatable="false">Настройки</string>
+    <!--Для экрана настроек-->
+    <string name="app_settings_name_activity" translatable="false">Настройки</string>
+    <string name="app_settings_theme" translatable="false">Темная тема</string>
+    <string name="app_settings_share" translatable="false">Поделиться приложением</string>
+    <string name="app_settings_help" translatable="false">Написать в поддержку</string>
+    <string name="app_settings_doc" translatable="false">Пользовательское соглашение</string>
+    <!--Для кнопок экрана настроек-->
+    <string name="site_course_Android" translatable="false">Привет! Вот ссылка на курс по Андройд разработке от Яндекс практикума https://practicum.yandex.ru/learn/android-developer/courses/</string>
+    <string name="message" translatable="false">Сообщение разработчикам и разработчицам приложения Playlist Maker</string>
+    <string name="subj_mes" translatable="false">Subject-Тема-message</string>
+    <string name="urlConfirm" translatable="false">https://yandex.ru/legal/practicum_offer/</string>
+    <string name="myMail" translatable="false">isc47@bk.ru</string>
+    <!--Для экрана поиска-->
+    <string name="no_records" translatable="false">no_records</string>
+    <string name="no_add" translatable="false">no_add</string>
+    <string name="backToHome" translatable="false">Назад</string>
+    <string name="icon_find" translatable="false">Очистить</string>
+    <!--Для экранов отсутствующих в заданиях-->
+    <string name="text_home" translatable="false">Home</string>
 </resources>

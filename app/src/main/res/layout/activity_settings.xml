@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Экран настроек приложения плей лист-->
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SettingsActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+
+    <!--Кнопка назад и заголовок-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin40dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding20dp"
+        android:paddingTop="@dimen/padding14dp">
+        <Button
+            style="@style/Theme.Button.activity_settings_arrow"
+            android:id="@+id/button_settings_Home"
+            android:layout_width="@dimen/paramHW16dp"
+            android:layout_height="@dimen/paramHW16dp"
+            android:layout_marginTop="@dimen/margin6dp"
+            android:paddingLeft="@dimen/padding0dp"
+            android:paddingRight="@dimen/padding0dp"
+            app:icon="@drawable/settings_arrow_back" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin28dp"
+            android:fontFamily="@font/ys_display_medium"
+            android:gravity="center"
+            android:paddingTop="@dimen/padding2dp"
+            android:paddingBottom="@dimen/padding2dp"
+            android:text="@string/app_settings"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text22sp" />
+    </LinearLayout>
+
+    <!--Темная тема-->
+    <Button
+        android:id="@+id/button_settings_DarkTheme"
+        style="@style/Theme.Button.activity_settings"
+        android:paddingEnd="@dimen/padding35dp"
+        android:text="@string/app_settings_theme"
+        app:icon="@drawable/settings_dark_theme" />
+
+    <!--Поделиться-->
+    <Button
+        android:id="@+id/button_settings_Share"
+        style="@style/Theme.Button.activity_settings"
+        android:text="@string/app_settings_share"
+        app:icon="@drawable/settings_share" />
+
+    <!--Написать в поддержку-->
+    <Button
+        android:id="@+id/button_settings_Support"
+        style="@style/Theme.Button.activity_settings"
+        android:text="@string/app_settings_help"
+        app:icon="@drawable/settings_support" />
+
+    <!--Пользовательское соглашение-->
+    <Button
+        android:id="@+id/button_settings_Confirm"
+        style="@style/Theme.Button.activity_settings"
+        android:paddingEnd="@dimen/padding23dp"
+        android:text="@string/app_settings_doc"
+        app:icon="@drawable/settings_arrow_forward" />
+</LinearLayout>

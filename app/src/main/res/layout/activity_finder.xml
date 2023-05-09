@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/padding14dp"
+    android:paddingLeft="@dimen/padding16dp"
+    android:paddingRight="@dimen/padding16dp"
+    android:orientation="vertical"
+    tools:context=".FinderActivity">
+
+    <!--Main title-->
+    <TextView
+        android:id="@+id/title_find_to_home"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:text="@string/app_find"
+        android:textSize="@dimen/text22sp"
+        android:layout_marginBottom="@dimen/margin24dp"
+        android:drawableStart="@drawable/arrowbackfind"
+        android:drawablePadding="@dimen/padding28dp"
+        android:fontFamily="@font/ys_display_medium" />
+
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/inputEditText"
+            style="@style/EditText_Search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="username"
+            android:drawableStart="@drawable/finder"
+            android:drawablePadding="@dimen/padding9dp"
+            android:hint="@string/app_find"
+            android:textColorHint="@color/settings_finder2"
+            android:inputType="text"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:paddingStart="@dimen/padding13dp"
+            android:paddingTop="@dimen/padding8_5dp"
+            android:paddingEnd="@dimen/padding0dp"
+            android:paddingBottom="@dimen/padding8_5dp"
+            android:textColor="@color/settings_text_title"
+            android:textSize="@dimen/text16sp" />
+        <ImageView
+            android:id="@+id/clearIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:contentDescription="@string/icon_find"
+            android:visibility="gone"
+            android:scaleType="center"
+            app:srcCompat="@drawable/clearfind"
+            android:layout_marginEnd="@dimen/margin14dp"
+            />
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/inputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+</LinearLayout>

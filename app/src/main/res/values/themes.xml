@@ -1,9 +1,55 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Test" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Theme.MyApp.DayNight" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/main_background_PLM</item>
+        <!-- Customize your theme here. -->
+        <item name="iconTint">@color/settings_image_PLM</item>
+        <item name="android:textColor">@color/settings_text_PLM</item>
+        <item name="android:backgroundTint">@color/white</item>
     </style>
 
-    <style name="Theme.Test" parent="Base.Theme.Test" />
+    <!--Для главного экрана-->
+    <style name="Theme.Button.activity_settings_theme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/main_background_PLM</item>
+        <!-- Customize your theme here. -->
+        <item name="iconTint">@color/settings_image_PLM</item>
+        <item name="android:textColor">@color/settings_text_PLM</item>
+        <item name="android:backgroundTint">@color/main_background_PLM</item>
+    </style>
+
+    <!--Для экрана поиска-->
+    <style name="Theme.Find" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/main_background_PLM</item>
+        <item name="colorSecondaryVariant">@color/main_background_PLM</item>
+        <item name="colorOnSecondary">@color/main_background_PLM</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/main_background_PLM</item>
+        <!-- Customize your theme here. -->
+        <item name="iconTint">@color/settings_image_PLM</item>
+        <item name="android:textColor">@color/settings_text_PLM</item>
+        <item name="android:backgroundTint">@color/white</item>
+    </style>
 </resources>
