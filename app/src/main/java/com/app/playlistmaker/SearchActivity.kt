@@ -11,18 +11,17 @@ import android.widget.EditText
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import java.util.ArrayList
 
-class FinderActivity : AppCompatActivity() {
+class SearchActivity : AppCompatActivity() {
     private val KEY_TEXT = ""
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_finder)
+        setContentView(R.layout.activity_search)
 
         val inputEditText = findViewById<EditText>(R.id.inputEditText)
         val clearButton = findViewById<ImageView>(R.id.clearIcon)

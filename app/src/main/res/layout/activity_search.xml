@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/padding16dp"
     android:paddingRight="@dimen/padding16dp"
     android:orientation="vertical"
-    tools:context=".FinderActivity">
+    tools:context=".SearchActivity">
 
     <!--Main title-->
     <FrameLayout

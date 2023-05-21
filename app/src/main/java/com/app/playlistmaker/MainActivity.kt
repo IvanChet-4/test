@@ -3,7 +3,6 @@ package com.app.playlistmaker
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
@@ -16,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         val mainMedia = findViewById<Button>(R.id.button_Media)
 
         mainFind.setOnClickListener {
-            val displayIntent = Intent(this, FinderActivity::class.java)
+            val displayIntent = Intent(this, SearchActivity::class.java)
             startActivity(displayIntent)
         }
 
