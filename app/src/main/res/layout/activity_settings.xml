@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin40dp"
         android:orientation="horizontal"
-        android:paddingLeft="@dimen/padding20dp"
+        android:paddingStart="@dimen/padding20dp"
         android:paddingTop="@dimen/padding14dp">
         <Button
             style="@style/Theme.Button.activity_settings_arrow"
@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="@dimen/margin28dp"
+            android:layout_marginStart="@dimen/margin28dp"
             android:fontFamily="@font/ys_display_medium"
             android:gravity="center"
             android:paddingTop="@dimen/padding2dp"
