@@ -37,9 +37,4 @@
     <style name="Theme.Button.activity_settings_arrow" parent="Theme.MyApp.DayNight">
     </style>
 
-<!--Для экрана поиска-->
-    <style name="EditText_Search">
-        <item name="android:backgroundTint">@color/gray</item>
-        <item name="android:background">@drawable/search_back1</item>
-    </style>
 </resources>
