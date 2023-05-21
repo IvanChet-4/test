@@ -66,25 +66,14 @@
         <item name="android:backgroundTint">@color/white</item>
         <item name="android:background">@drawable/search_back1</item>
     </style>
-
     <style name="image_post">
         <item name="android:background">@drawable/track_item_back</item>
     </style>
-
-    <style name="rv_load">
-        <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryVariant">@color/white</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/main_background_PLM</item>
-        <item name="colorSecondaryVariant">@color/main_background_PLM</item>
-        <item name="colorOnSecondary">@color/main_background_PLM</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/main_background_PLM</item>
-        <!-- Customize your theme here. -->
-        <item name="iconTint">@color/settings_image_PLM</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:backgroundTint">@color/black</item>
+    <style name="backArrowSearch">
         <item name="android:tint">@color/white</item>
+    </style>
+    <style name="otherImageSearch">
+        <item name="android:tint">@color/white</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 </resources>

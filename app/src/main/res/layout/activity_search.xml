@@ -19,11 +19,12 @@
 
         <ImageView
             android:id="@+id/title_find_to_home"
+            style="@style/backArrowSearch"
+            android:src="@drawable/arrowbackfind"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|start"
-            android:drawablePadding="@dimen/padding4dp"
-            android:src="@drawable/arrowbackfind" />
+            android:drawablePadding="@dimen/padding4dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -76,7 +77,6 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/search_track"
-            style="@style/rv_load"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"

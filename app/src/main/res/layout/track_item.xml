@@ -9,12 +9,11 @@
 
     <ImageView
         android:id="@+id/albums_img"
-        style="@style/image_post"
+        android:background="@drawable/track_item_back"
         android:layout_width="@dimen/paramHW45dp"
         android:layout_height="@dimen/paramHW45dp"
         android:layout_marginStart="@dimen/margin13dp"
         android:layout_marginTop="@dimen/margin8dp"
-        android:background="@drawable/track_item_back"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,6 +40,7 @@
 
         <TextView
             android:id="@+id/band_name"
+            style="@style/otherImageSearch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
@@ -50,6 +50,7 @@
 
         <ImageView
             android:id="@+id/ellipse"
+            style="@style/otherImageSearch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin5dp"
@@ -58,6 +59,7 @@
 
         <TextView
             android:id="@+id/track_time"
+            style="@style/otherImageSearch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin5dp"
@@ -67,6 +69,7 @@
 
     <ImageView
         android:id="@+id/vector_button"
+        style="@style/otherImageSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin23dp"
