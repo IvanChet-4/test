@@ -16,7 +16,10 @@ import androidx.recyclerview.widget.RecyclerView
 import java.util.ArrayList
 
 class SearchActivity : AppCompatActivity() {
-    private val KEY_TEXT = ""
+    companion object {
+    private val SEARCH_USER_INPUT = "SEARCH_USER_INPUT"
+    }
+
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -94,12 +97,13 @@ class SearchActivity : AppCompatActivity() {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         val inputEditText = findViewById<EditText>(R.id.inputEditText)
-        outState.putString(KEY_TEXT, inputEditText.text.toString())
+        super.onSaveInstanceState(outState)
+        outState.putString(SEARCH_USER_INPUT, inputEditText.text.toString())
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
-        savedInstanceState.getString(KEY_TEXT, "")
+        savedInstanceState.getString(SEARCH_USER_INPUT, "")
     }
 
     private fun clearButtonVisibility(s: CharSequence?): Int {
