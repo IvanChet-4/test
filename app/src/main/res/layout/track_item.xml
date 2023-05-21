@@ -16,8 +16,7 @@
         android:layout_width="@dimen/paramHW45dp"
         android:layout_height="@dimen/paramHW45dp"
         android:layout_marginTop="@dimen/margin8dp"
-        android:layout_marginStart="@dimen/margin13dp"
-        />
+        android:layout_marginStart="@dimen/margin13dp" />
 
     <TextView
         android:id="@+id/track_name"
@@ -48,8 +47,7 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:textSize="@dimen/text11sp"
-            android:textColor="?attr/color"
-            />
+            android:textColor="?attr/color" />
 
         <ImageView
             android:id="@+id/ellipse"
@@ -65,8 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin5dp"
             android:textSize="@dimen/text11sp"
-            android:textColor="?attr/color"
-            />
+            android:textColor="?attr/color" />
 
     </LinearLayout>
 

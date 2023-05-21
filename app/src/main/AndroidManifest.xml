@@ -17,8 +17,7 @@
 
         <activity
             android:name=".SettingsActivity"
-            android:exported="false"
-             >
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -27,8 +26,7 @@
         <activity
             android:name=".SearchActivity"
             android:exported="false"
-            android:theme="@style/Theme.Find"
-            >
+            android:theme="@style/Theme.Find">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value=""  />
@@ -45,8 +43,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.Button.activity_settings_theme"
-            >
+            android:theme="@style/Theme.Button.activity_settings_theme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

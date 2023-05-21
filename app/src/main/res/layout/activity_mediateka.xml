@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".MediatekaActivity">
-
-
     <!--Home-->
     <Button
         android:id="@+id/button_mediateka_Home"
@@ -21,7 +19,5 @@
         android:textSize="@dimen/text22sp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="140dp"
-        tools:layout_editor_absoluteY="150dp"
-        />
-
+        tools:layout_editor_absoluteY="150dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
