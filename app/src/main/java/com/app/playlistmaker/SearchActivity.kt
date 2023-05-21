@@ -49,8 +49,6 @@ class SearchActivity : AppCompatActivity() {
         inputEditText.addTextChangedListener(simpleTextWatcher)
         val arrowButton = findViewById<ImageView>(R.id.title_find_to_home)
         arrowButton.setOnClickListener {
-            val displayIntent = Intent(this, MainActivity::class.java)
-            startActivity(displayIntent)
             finish()
         }
 
