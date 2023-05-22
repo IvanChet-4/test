@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.webkit.WebView
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Switch
+import androidx.appcompat.app.AppCompatDelegate
 
 class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,6 +16,8 @@ class SettingsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_settings)
 
         val settingsHome = findViewById<ImageView>(R.id.button_settings_Home)
+
+        val themeSwitch = findViewById<Switch>(R.id.button_settings_DarkTheme)
 
         val shareToOtherApp = findViewById<Button>(R.id.button_settings_Share)
 
@@ -23,6 +27,20 @@ class SettingsActivity : AppCompatActivity() {
 
         settingsHome.setOnClickListener {
             finish()
+        }
+
+        themeSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
+            // on below line we are checking
+            // if switch is checked or not.
+            if (isChecked) {
+                // on below line we are setting text
+                // if switch is checked.
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                // on below line we are setting text
+                // if switch is unchecked.
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
         }
 
         shareToOtherApp.setOnClickListener {

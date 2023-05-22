@@ -68,4 +68,9 @@
     <style name="otherImageSearch">
         <item name="android:textColor">@color/settings_image_PLM</item>
     </style>
+    <style name="text_settings">
+        <item name="android:textColor">@color/settings_text_PLM</item>
+        <item name="android:fontFamily">@font/ys_display_medium</item>
+        <item name="android:textSize">@dimen/text16sp</item>
+    </style>
 </resources>
