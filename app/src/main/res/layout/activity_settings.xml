@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><!--Экран настроек приложения плей лист-->
-
-
+<?xml version="1.0" encoding="utf-8"?>
+<!--Экран настроек приложения плей лист-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,7 +9,7 @@
     tools:context=".SettingsActivity">
 
     <!--Кнопка назад и заголовок-->
-    <LinearLayout
+    <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin40dp"
@@ -18,15 +17,13 @@
         android:paddingStart="@dimen/padding20dp"
         android:paddingTop="@dimen/padding14dp">
 
-        <Button
+        <ImageView
             android:id="@+id/button_settings_Home"
-            style="@style/Theme.Button.activity_settings_arrow"
+            style="@style/backArrowSearch"
             android:layout_width="@dimen/paramHW16dp"
             android:layout_height="@dimen/paramHW16dp"
             android:layout_marginTop="@dimen/margin6dp"
-            android:paddingLeft="@dimen/padding0dp"
-            android:paddingRight="@dimen/padding0dp"
-            app:icon="@drawable/settings_arrow_back" />
+            android:src="@drawable/settings_arrow_back" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -35,12 +32,10 @@
             android:layout_marginStart="@dimen/margin28dp"
             android:fontFamily="@font/ys_display_medium"
             android:gravity="center"
-            android:paddingTop="@dimen/padding2dp"
-            android:paddingBottom="@dimen/padding2dp"
             android:text="@string/app_settings"
             android:textAllCaps="false"
             android:textSize="@dimen/text22sp" />
-    </LinearLayout>
+    </FrameLayout>
 
     <!--Темная тема-->
     <Button
