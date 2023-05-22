@@ -61,6 +61,7 @@
     <!--Для поля поиска-->
     <style name="EditText_Search">
         <item name="android:tint">@color/black</item>
+        <item name="drawableTint">@color/black</item>
         <item name="android:textColorHint">@color/settings_text_PLM</item>
         <item name="android:textColor">@color/settings_text_PLM</item>
         <item name="android:backgroundTint">@color/white</item>
