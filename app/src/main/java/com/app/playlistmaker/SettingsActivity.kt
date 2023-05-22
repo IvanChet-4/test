@@ -30,15 +30,9 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         themeSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
-            // on below line we are checking
-            // if switch is checked or not.
             if (isChecked) {
-                // on below line we are setting text
-                // if switch is checked.
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
             } else {
-                // on below line we are setting text
-                // if switch is unchecked.
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             }
         }
