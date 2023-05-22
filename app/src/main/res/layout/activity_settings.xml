@@ -1,15 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--Экран настроек приложения плей лист-->
+<?xml version="1.0" encoding="utf-8"?><!--Экран настроек приложения плей лист-->
 
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".SettingsActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".SettingsActivity">
 
     <!--Кнопка назад и заголовок-->
     <LinearLayout
@@ -19,15 +17,17 @@
         android:orientation="horizontal"
         android:paddingStart="@dimen/padding20dp"
         android:paddingTop="@dimen/padding14dp">
+
         <Button
-            style="@style/Theme.Button.activity_settings_arrow"
             android:id="@+id/button_settings_Home"
+            style="@style/Theme.Button.activity_settings_arrow"
             android:layout_width="@dimen/paramHW16dp"
             android:layout_height="@dimen/paramHW16dp"
             android:layout_marginTop="@dimen/margin6dp"
             android:paddingLeft="@dimen/padding0dp"
             android:paddingRight="@dimen/padding0dp"
             app:icon="@drawable/settings_arrow_back" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

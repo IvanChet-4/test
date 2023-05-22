@@ -38,11 +38,11 @@ class SettingsActivity : AppCompatActivity() {
 
         writeToSupport.setOnClickListener {
             Intent(Intent.ACTION_SENDTO).apply {
-            data = Uri.parse("mailto:")
-            putExtra(Intent.EXTRA_EMAIL, arrayOf(getString(R.string.myMail)))
-            putExtra(Intent.EXTRA_SUBJECT, getString(R.string.subj_mes))
-            putExtra(Intent.EXTRA_TEXT, getString(R.string.message))
-            startActivity(this)
+                data = Uri.parse("mailto:")
+                putExtra(Intent.EXTRA_EMAIL, arrayOf(getString(R.string.myMail)))
+                putExtra(Intent.EXTRA_SUBJECT, getString(R.string.subj_mes))
+                putExtra(Intent.EXTRA_TEXT, getString(R.string.message))
+                startActivity(this)
             }
         }
 
