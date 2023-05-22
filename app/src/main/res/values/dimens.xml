@@ -16,6 +16,7 @@
     <dimen name="padding28dp">28dp</dimen>
     <dimen name="padding35dp">35dp</dimen>
     <dimen name="padding44dp">44dp</dimen>
+    <dimen name="padding64dp">64dp</dimen>
     <!--margins-->
     <dimen name="margin4dp">4dp</dimen>
     <dimen name="margin5dp">5dp</dimen>
@@ -31,6 +32,7 @@
     <dimen name="margin28dp">28dp</dimen>
     <dimen name="margin40dp">40dp</dimen>
     <dimen name="margin44dp">44dp</dimen>
+    <dimen name="margin53dp">53dp</dimen>
     <dimen name="margin66dp">66dp</dimen>
     <!--text size-->
     <dimen name="text11sp">11sp</dimen>

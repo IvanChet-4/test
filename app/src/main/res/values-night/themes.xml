@@ -66,9 +66,6 @@
         <item name="android:backgroundTint">@color/white</item>
         <item name="android:background">@drawable/search_back1</item>
     </style>
-    <style name="image_post">
-        <item name="android:background">@drawable/track_item_back</item>
-    </style>
     <style name="backArrowSearch">
         <item name="android:tint">@color/white</item>
     </style>
