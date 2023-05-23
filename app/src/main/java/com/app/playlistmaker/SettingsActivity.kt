@@ -1,6 +1,8 @@
 package com.app.playlistmaker
 
 import android.content.Intent
+import android.content.pm.ConfigurationInfo
+import android.content.res.Configuration
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +11,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.Switch
 import androidx.appcompat.app.AppCompatDelegate
+import java.security.AccessController.getContext
 
 class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,13 +32,16 @@ class SettingsActivity : AppCompatActivity() {
             finish()
         }
 
+
+
         themeSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
             } else {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             }
-        }
+       }
+
 
         shareToOtherApp.setOnClickListener {
             val sendIntent: Intent = Intent().apply {
