@@ -22,7 +22,7 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
-        val settingsHome = findViewById<ImageView>(R.id.button_settings_Home)
+        val settingsHome = findViewById<ImageView>(R.id.image_settings_Home)
         val themeSwitch = findViewById<Switch>(R.id.switch_Widget)
         val shareToOtherApp = findViewById<Button>(R.id.button_settings_Share)
         val writeToSupport = findViewById<Button>(R.id.button_settings_Support)

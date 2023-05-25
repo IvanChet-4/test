@@ -18,7 +18,7 @@
         android:paddingTop="@dimen/padding14dp">
 
         <ImageView
-            android:id="@+id/button_settings_Home"
+            android:id="@+id/image_settings_Home"
             style="@style/backArrowSearch"
             android:layout_width="@dimen/paramHW16dp"
             android:layout_height="@dimen/paramHW16dp"
