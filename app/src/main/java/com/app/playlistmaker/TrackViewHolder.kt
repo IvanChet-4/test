@@ -18,7 +18,7 @@ class TrackViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val trackTime: TextView = itemView.findViewById(R.id.track_time)
 
     fun bind(item: Track) {
-        val corner_radius = itemView.resources.getDimensionPixelSize(R.dimen.radius2dp)
+        val cornerRadius = itemView.resources.getDimensionPixelSize(R.dimen.radius2dp)
         trackName.text = item.trackName
         bandName.text = item.bandName
         trackTime.text = item.trackTime
@@ -28,7 +28,7 @@ class TrackViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             .skipMemoryCache(true)
             .centerCrop()
             .placeholder(R.drawable.placeholderview)
-            .transform(RoundedCorners(corner_radius))
+            .transform(RoundedCorners(cornerRadius))
             .into(albumsImg)
     }
 }

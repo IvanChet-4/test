@@ -1,6 +1,9 @@
 package com.app.playlistmaker
 
+import android.annotation.SuppressLint
+import android.app.Application
 import android.content.Intent
+import android.content.SharedPreferences
 import android.content.pm.ConfigurationInfo
 import android.content.res.Configuration
 import android.net.Uri
@@ -14,33 +17,33 @@ import androidx.appcompat.app.AppCompatDelegate
 import java.security.AccessController.getContext
 
 class SettingsActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
         val settingsHome = findViewById<ImageView>(R.id.button_settings_Home)
-
-        val themeSwitch = findViewById<Switch>(R.id.button_settings_DarkTheme)
-
+        val themeSwitch = findViewById<Switch>(R.id.switch_Widget)
         val shareToOtherApp = findViewById<Button>(R.id.button_settings_Share)
-
         val writeToSupport = findViewById<Button>(R.id.button_settings_Support)
-
         val settingsConfirm = findViewById<Button>(R.id.button_settings_Confirm)
 
         settingsHome.setOnClickListener {
             finish()
         }
 
-
-
+        var switchStatus: Boolean = false
         themeSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            } else {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                    switchStatus = true
+                } else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                    switchStatus = false
+                }
             }
-       }
+
+
 
 
         shareToOtherApp.setOnClickListener {
@@ -69,4 +72,6 @@ class SettingsActivity : AppCompatActivity() {
             startActivity(openSite);
         }
     }
+
+
 }

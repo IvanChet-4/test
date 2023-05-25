@@ -51,14 +51,14 @@
             android:text="@string/app_settings_theme" />
 
         <Switch
-            android:id="@+id/button_settings_DarkTheme"
+            android:id="@+id/switch_Widget"
             style="@style/Theme.Button.activity_settings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right|center_vertical"
             android:thumb="@drawable/settings_dark_theme"
             android:trackTint="@color/settings_image_PLM"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
     </FrameLayout>
 
 
