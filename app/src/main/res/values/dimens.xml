@@ -4,7 +4,8 @@
     <dimen name="padding0dp">0dp</dimen>
     <dimen name="padding2dp">2dp</dimen>
     <dimen name="padding4dp">4dp</dimen>
-    <dimen name="padding8_5dp">8.5dp</dimen>
+    <dimen name="padding6dp">6dp</dimen>
+    <dimen name="padding8_5dp">8dp</dimen>
     <dimen name="padding9dp">9dp</dimen>
     <dimen name="padding10dp">10dp</dimen>
     <dimen name="padding13dp">13dp</dimen>
@@ -16,6 +17,7 @@
     <dimen name="padding28dp">28dp</dimen>
     <dimen name="padding35dp">35dp</dimen>
     <dimen name="padding44dp">44dp</dimen>
+    <dimen name="padding64dp">64dp</dimen>
     <!--margins-->
     <dimen name="margin4dp">4dp</dimen>
     <dimen name="margin5dp">5dp</dimen>
@@ -31,6 +33,7 @@
     <dimen name="margin28dp">28dp</dimen>
     <dimen name="margin40dp">40dp</dimen>
     <dimen name="margin44dp">44dp</dimen>
+    <dimen name="margin53dp">53dp</dimen>
     <dimen name="margin66dp">66dp</dimen>
     <!--text size-->
     <dimen name="text11sp">11sp</dimen>
