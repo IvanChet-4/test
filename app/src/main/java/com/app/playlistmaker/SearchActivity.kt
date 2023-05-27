@@ -48,8 +48,8 @@ class SearchActivity : AppCompatActivity() {
         val arrowButton = findViewById<ImageView>(R.id.title_find_to_home)
         val refreshButton = findViewById<Button>(R.id.refresh_button)
         val recycler = findViewById<RecyclerView>(R.id.search_track)
-        val notFoundIcon = findViewById<ImageView>(R.id.no_found_image)
-        val notFoundText = findViewById<TextView>(R.id.no_found_text)
+        val notFoundIcon = findViewById<ImageView>(R.id.not_found_image)
+        val notFoundText = findViewById<TextView>(R.id.not_found_text)
         val noInternetIcon = findViewById<ImageView>(R.id.no_internet_image)
         val noInternetText = findViewById<TextView>(R.id.no_internet_text)
 
@@ -128,8 +128,8 @@ class SearchActivity : AppCompatActivity() {
 
         val refreshButton = findViewById<Button>(R.id.refresh_button)
         val trackAdapter = TrackAdapter(tracksList)
-        val notFoundImage: ImageView = findViewById(R.id.no_found_image)
-        val notFoundText: TextView = findViewById(R.id.no_found_text)
+        val notFoundImage: ImageView = findViewById(R.id.not_found_image)
+        val notFoundText: TextView = findViewById(R.id.not_found_text)
         val noInternetImage: ImageView = findViewById(R.id.no_internet_image)
         val noInternetText: TextView = findViewById(R.id.no_internet_text)
         val recycler = findViewById<RecyclerView>(R.id.search_track)
