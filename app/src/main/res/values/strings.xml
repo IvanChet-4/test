@@ -21,6 +21,9 @@
     <string name="no_add" translatable="false">no_add</string>
     <string name="backToHome" translatable="false">Назад</string>
     <string name="icon_find" translatable="false">Очистить</string>
+    <string name="not_found" translatable="false">Ничего не нашлось</string>
+    <string name="no_internet" translatable="false">Проблемы со связью\n\nЗагрузка не удалась. Проверьте подключение к интернету</string>
+    <string name="refresh_text" translatable="false">Обновить</string>
     <!--Для экранов отсутствующих в заданиях-->
     <string name="text_home" translatable="false">Home</string>
 </resources>

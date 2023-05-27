@@ -43,9 +43,6 @@ class SettingsActivity : AppCompatActivity() {
                 }
             }
 
-
-
-
         shareToOtherApp.setOnClickListener {
             val sendIntent: Intent = Intent().apply {
                 action = Intent.ACTION_SEND
@@ -72,6 +69,4 @@ class SettingsActivity : AppCompatActivity() {
             startActivity(openSite);
         }
     }
-
-
 }
