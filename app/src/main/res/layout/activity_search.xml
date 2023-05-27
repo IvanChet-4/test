@@ -87,7 +87,6 @@
             tools:itemCount="5"
             tools:listitem="@layout/track_item" />
 
-
         <ImageView
             android:id="@+id/no_found_image"
             style="@style/text_and_image_search_placeholder"
@@ -107,7 +106,7 @@
             android:fontFamily="@font/ys_display_medium"
             android:gravity="center"
             android:text="@string/not_found"
-            android:textSize="19sp"
+            android:layout_marginTop="@dimen/margin16dp"
             android:visibility="gone" />
 
         <ImageView
@@ -126,12 +125,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="246dp"
+            android:layout_marginTop="@dimen/margin16dp"
             android:fontFamily="@font/ys_display_medium"
             android:gravity="center"
             android:lines="4"
             android:text="@string/no_internet"
-            android:textSize="19sp"
             android:visibility="gone" />
 
         <Button
@@ -146,6 +144,4 @@
             android:textAllCaps="false"
             android:textSize="14sp"
             android:visibility="gone" />
-
-
 </LinearLayout>
