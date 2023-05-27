@@ -39,6 +39,7 @@
     <!--text size-->
     <dimen name="text11sp">11sp</dimen>
     <dimen name="text16sp">16sp</dimen>
+    <dimen name="text19sp">19sp</dimen>
     <dimen name="text22sp">22sp</dimen>
     <!--radius-->
     <dimen name="radius2dp">2dp</dimen>
