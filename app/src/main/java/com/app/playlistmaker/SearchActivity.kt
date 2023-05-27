@@ -22,7 +22,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.ArrayList
 
-
 class SearchActivity : AppCompatActivity() {
     companion object {
         private val SEARCH_USER_INPUT = "SEARCH_USER_INPUT"
@@ -48,9 +47,9 @@ class SearchActivity : AppCompatActivity() {
         val arrowButton = findViewById<ImageView>(R.id.title_find_to_home)
         val refreshButton = findViewById<Button>(R.id.refresh_button)
         val recycler = findViewById<RecyclerView>(R.id.search_track)
-        val notFoundIcon = findViewById<ImageView>(R.id.not_found_image)
+        val notFoundImage = findViewById<ImageView>(R.id.not_found_image)
         val notFoundText = findViewById<TextView>(R.id.not_found_text)
-        val noInternetIcon = findViewById<ImageView>(R.id.no_internet_image)
+        val noInternetImage = findViewById<ImageView>(R.id.no_internet_image)
         val noInternetText = findViewById<TextView>(R.id.no_internet_text)
 
         val trackAdapter = TrackAdapter(tracksList)
@@ -85,12 +84,63 @@ class SearchActivity : AppCompatActivity() {
         inputEditText.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 if (inputEditText.text.isNotEmpty()) {
-                    search(inputEditText.text.toString())
+                    iTunesService.search(inputEditText.text.toString())
+                        .enqueue(object : Callback<TracksSearchResponse> {
+
+                            @SuppressLint("NotifyDataSetChanged")
+                            override fun onResponse(
+                                call: Call<TracksSearchResponse>,
+                                response: Response<TracksSearchResponse>
+                            ) {
+                                if (response.code() == 200 && response.body()?.results?.isNotEmpty() == true) {
+                                    tracksList.clear()
+                                    recycler.visibility = View.VISIBLE
+                                    refreshButton.visibility = View.GONE
+                                    notFoundImage.visibility = View.GONE
+                                    notFoundText.visibility = View.GONE
+                                    noInternetImage.visibility = View.GONE
+                                    noInternetText.visibility = View.GONE
+                                    refreshButton.visibility = View.GONE
+                                    tracksList.addAll(response.body()?.results!!)
+                                    trackAdapter.notifyDataSetChanged()
+                                } else if (response.code() == 200 && trackAdapter.tracks.isEmpty()) {
+                                    notFoundImage.visibility = View.VISIBLE
+                                    notFoundText.visibility = View.VISIBLE
+                                    recycler.visibility = View.GONE
+                                    noInternetImage.visibility = View.GONE
+                                    noInternetText.visibility = View.GONE
+                                    refreshButton.visibility = View.GONE
+                                    trackAdapter.notifyDataSetChanged()
+                                }
+                                else {
+                                    noInternetImage.visibility = View.VISIBLE
+                                    noInternetText.visibility = View.VISIBLE
+                                    refreshButton.visibility = View.VISIBLE
+                                    notFoundImage.visibility = View.GONE
+                                    notFoundText.visibility = View.GONE
+                                    recycler.visibility = View.GONE
+                                    refreshButton.setOnClickListener { search(inputEditText.text.toString()) }
+                                    trackAdapter.notifyDataSetChanged()
+                                }
+                            }
+
+                            override fun onFailure(call: Call<TracksSearchResponse>, t: Throwable) {
+                                noInternetImage.visibility = View.VISIBLE
+                                noInternetText.visibility = View.VISIBLE
+                                refreshButton.visibility = View.VISIBLE
+                                notFoundImage.visibility = View.GONE
+                                notFoundText.visibility = View.GONE
+                                recycler.visibility = View.GONE
+                                refreshButton.setOnClickListener { search(inputEditText.text.toString()) }
+                            }
+                        })
                 }
+                true
             }
             false
         }
 
+        true
 
 //        val recycler = findViewById<RecyclerView>(R.id.search_track)
 //        val listTrack: ArrayList<Track> =

@@ -2,6 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.MyApp.DayNight" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryVariant">@color/settings_text_PLM</item>
         <item name="colorOnPrimary">@color/settings_text_PLM</item>
         <!-- Secondary brand color. -->
@@ -87,6 +88,7 @@
         <item name="android:fontFamily">@font/ys_display_medium</item>
         <item name="android:textSize">@dimen/text19sp</item>
         <item name="colorPrimary">@color/white</item>
+        <item name="android:fillType" tools:ignore="DuplicateDefinition,NewApi">@color/white</item>
     </style>
     <style name="refresh_button_searching">
         <item name="android:textColor">@color/settings_text_title</item>
@@ -95,5 +97,8 @@
         <item name="android:tint">@color/white</item>
         <item name="android:backgroundTint">@color/white</item>
         <item name="cornerRadius">@dimen/radius54dp</item>
+    </style>
+    <style name="image_errors_searching">
+        <item name="colorPrimary">@color/white</item>
     </style>
 </resources>
