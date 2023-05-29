@@ -67,6 +67,14 @@ class SearchActivity : AppCompatActivity() {
         recycler.layoutManager = LinearLayoutManager(this)
         recycler.adapter = trackAdapter
 
+        inputEditText.setOnEditorActionListener { _, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                if (inputEditText.text.isNotEmpty()) {
+                    search(inputEditText.text.toString())
+                }
+            }
+            false
+        }
 
         clearButton.setOnClickListener {
             val keyboard = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -93,14 +101,7 @@ class SearchActivity : AppCompatActivity() {
         }
         inputEditText.addTextChangedListener(simpleTextWatcher)
 
-        inputEditText.setOnEditorActionListener { _, actionId, _ ->
-            if (actionId == EditorInfo.IME_ACTION_DONE) {
-                if (inputEditText.text.isNotEmpty()) {
-                     search(inputEditText.text.toString())
-                }
-            }
-            false
-        }
+
 
 //        inputEditText.setOnEditorActionListener { _, actionId, _ ->
 //            if (actionId == EditorInfo.IME_ACTION_DONE) {
