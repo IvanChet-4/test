@@ -35,7 +35,7 @@ class SearchActivity : AppCompatActivity() {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    private val iTunesService = retrofit.create(TunesApiForRequests::class.java)
+    private val iTunesService = retrofit.create(iTunesApiForRequests::class.java)
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,6 +63,7 @@ class SearchActivity : AppCompatActivity() {
             keyboard.hideSoftInputFromWindow(inputEditText.windowToken, 0)
             inputEditText.clearFocus()
             inputEditText.setText("")
+            recycler.removeAllViewsInLayout()
         }
 
         arrowButton.setOnClickListener { finish() }
@@ -173,7 +174,7 @@ class SearchActivity : AppCompatActivity() {
         }
     }
 
-   private fun search(inputEditText: String) {
+    private fun search(inputEditText: String) {
         tracksList.clear()
 
         val refreshButton = findViewById<Button>(R.id.refresh_button)
@@ -217,7 +218,7 @@ class SearchActivity : AppCompatActivity() {
                         refreshButton.visibility = View.GONE
                         trackAdapter.notifyDataSetChanged()
                     }
-                 else {
+                    else {
                         noInternetImage.visibility = View.VISIBLE
                         noInternetText.visibility = View.VISIBLE
                         refreshButton.visibility = View.VISIBLE
