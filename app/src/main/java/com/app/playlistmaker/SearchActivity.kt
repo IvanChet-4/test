@@ -23,6 +23,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.ArrayList
 
 class SearchActivity : AppCompatActivity() {
+    private lateinit var inputEditText: EditText
     companion object {
         private val SEARCH_USER_INPUT = "SEARCH_USER_INPUT"
         const val API_URL = "https://itunes.apple.com"
@@ -42,7 +43,7 @@ class SearchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
 
-        val inputEditText = findViewById<EditText>(R.id.inputEditText)
+        inputEditText = findViewById(R.id.inputEditText)
         val clearButton = findViewById<ImageView>(R.id.clearIcon)
         val arrowButton = findViewById<ImageView>(R.id.title_find_to_home)
         val refreshButton = findViewById<Button>(R.id.refresh_button)
@@ -63,6 +64,7 @@ class SearchActivity : AppCompatActivity() {
             keyboard.hideSoftInputFromWindow(inputEditText.windowToken, 0)
             inputEditText.clearFocus()
             inputEditText.setText("")
+            tracksList.clear()
             recycler.removeAllViewsInLayout()
         }
 
