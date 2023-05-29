@@ -58,7 +58,10 @@
             android:paddingTop="@dimen/padding8_5dp"
             android:paddingEnd="@dimen/padding0dp"
             android:paddingBottom="@dimen/padding8_5dp"
-            android:textSize="@dimen/text16sp" />
+            android:layout_marginBottom="@dimen/margin24dp"
+            android:textSize="@dimen/text16sp"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
 
         <ImageView
             android:id="@+id/clearIcon"
@@ -67,6 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end|center_vertical"
             android:layout_marginEnd="@dimen/margin14dp"
+            android:layout_marginBottom="@dimen/margin12dp"
             android:contentDescription="@string/icon_find"
             android:scaleType="center"
             android:src="@drawable/clearfind"
@@ -76,7 +80,6 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/search_track"
             android:paddingStart="13dp"
@@ -86,5 +89,59 @@
             android:orientation="vertical"
             tools:itemCount="5"
             tools:listitem="@layout/track_item" />
+
+        <ImageView
+            android:id="@+id/not_found_image"
+            style="@style/image_errors_searching"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="110dp"
+            android:src="@drawable/not_found"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/not_found_text"
+            style="@style/text_and_image_search_placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/not_found"
+            android:layout_marginTop="@dimen/margin246dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/no_internet_image"
+            style="@style/image_errors_searching"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="110dp"
+            android:src="@drawable/no_internet"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/no_internet_text"
+            style="@style/text_and_image_search_placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin246dp"
+            android:gravity="center"
+            android:lines="4"
+            android:text="@string/no_internet"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/refresh_button"
+            style="@style/refresh_button_searching"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="358dp"
+            android:text="@string/refresh_text"
+            android:textAllCaps="false"
+            android:visibility="gone" />
     </FrameLayout>
 </LinearLayout>

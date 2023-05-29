@@ -8,7 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="color_E5E5E5">#E5E5E5</color>
-    #E5E5E5
     <!--Для первого экрана-->
     <color name="main_background_PLM">#3772E7</color>
     <color name="main_text_title_PLM">#FFFFFF</color>
@@ -25,5 +24,5 @@
     <color name="settings_finder2">#AEAFB4</color>
 
     <color name="red">#ff0000</color>
-
+    <color name="yellow">#FCD452</color>
 </resources>
