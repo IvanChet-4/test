@@ -28,9 +28,8 @@ class TrackViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             .placeholder(R.drawable.placeholderview)
             .transform(RoundedCorners(cornerRadius))
             .into(albumsImg)
-
         trackName.text = item.trackName
-        bandName.text = item.bandName
-        trackTime.text = SimpleDateFormat("mm:ss", Locale.getDefault()).format(item.trackTime)
+        bandName.text = item.artistName
+        trackTime.text = SimpleDateFormat("mm:ss", Locale.getDefault()).format(item.trackTimeMillis)
     }
 }
