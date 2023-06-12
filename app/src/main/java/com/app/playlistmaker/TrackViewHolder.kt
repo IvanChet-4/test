@@ -20,9 +20,6 @@ class TrackViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     fun bind(item: Track) {
         val cornerRadius = itemView.resources.getDimensionPixelSize(R.dimen.radius2dp)
-        trackName.text = item.trackName
-        bandName.text = item.bandName
-        trackTime.text = SimpleDateFormat("mm:ss", Locale.getDefault()).format(item.trackTime)
         Glide.with(itemView)
             .load(item.artworkUrl100)
             .diskCacheStrategy(DiskCacheStrategy.NONE)
@@ -31,5 +28,8 @@ class TrackViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             .placeholder(R.drawable.placeholderview)
             .transform(RoundedCorners(cornerRadius))
             .into(albumsImg)
+        trackName.text = item.trackName
+        bandName.text = item.artistName
+        trackTime.text = SimpleDateFormat("mm:ss", Locale.getDefault()).format(item.trackTimeMillis)
     }
 }

@@ -101,4 +101,5 @@
     <style name="image_errors_searching">
         <item name="colorPrimary">@color/white</item>
     </style>
+
 </resources>
